@@ -1,0 +1,41 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.2"
+
+    defaultConfig {
+        minSdkVersion 23
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    dependencies {
+        provided libraries.auto_value_annotations
+        annotationProcessor  libraries.auto_value_apt
+        annotationProcessor  libraries.auto_value_gson
+        annotationProcessor  libraries.auto_value_parcel
+        annotationProcessor  libraries.dagger_apt
+        annotationProcessor  libraries.icepick_apt
+        annotationProcessor  libraries.fragmentargs_apt
+        compile libraries.dagger
+        compile libraries.auto_value_parcel_adapter
+//        compile libraries.fragmentargs
+//        compile libraries.icepick;
+//        compile libraries.auto_value_parcel_adapter
+//        provided libraries.javax_annotation
+//        provided libraries.auto_value_provided;
+    }
+}

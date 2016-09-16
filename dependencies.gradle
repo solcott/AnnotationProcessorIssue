@@ -1,0 +1,24 @@
+ext{
+    support_version = "24.2.1"
+    dagger_version = "2.7"
+    fragmentargs_version = "3.0.2"
+    auto_value = "com.google.auto.value:auto-value:1.3"
+    auto_value_gson =
+    support_annotations = "com.android.support:support-annotations:$support_version"
+    auto_value_parcel_version = "0.2.3-rc2"
+    libraries = [
+            dagger                    : "com.google.dagger:dagger:$dagger_version",
+            fragmentargs                   : "com.hannesdorfmann.fragmentargs:annotation:$fragmentargs_version",
+            auto_value_apt: auto_value,
+            java_poet:"com.squareup:javapoet:1.7.0",
+            auto_value_gson :"com.ryanharter.auto.value:auto-value-gson:0.4.2",
+            auto_value_parcel :"com.ryanharter.auto.value:auto-value-parcel:$auto_value_parcel_version",
+            auto_value_annotations:'com.jakewharton.auto.value:auto-value-annotations:1.3',
+            auto_value_parcel_adapter : "com.ryanharter.auto.value:auto-value-parcel-adapter:$auto_value_parcel_version",
+            dagger_apt                : "com.google.dagger:dagger-compiler:$dagger_version",
+            fragmentargs_apt               : "com.hannesdorfmann.fragmentargs:processor:$fragmentargs_version",
+            icepick                   : "frankiesardo:icepick:3.1.0",
+            icepick_apt               : "frankiesardo:icepick-processor:3.1.0",
+            javax_annotation: "javax.annotation:jsr250-api:1.0",
+    ]
+}
